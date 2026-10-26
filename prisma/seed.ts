@@ -32,6 +32,7 @@ async function main() {
       create: {
         name: data.name,
         quantity: data.quantity,
+        value: data.value,
         owner: data.owner,
         condition,
       },

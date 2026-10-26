@@ -1,8 +1,9 @@
 import * as Yup from 'yup';
 
-export const AddStuffSchema = Yup.object({
+export const AddStuffSchema = Yup.object().shape({
   name: Yup.string().required(),
   quantity: Yup.number().positive().required(),
+  value: Yup.number().positive().required(),
   condition: Yup.string().oneOf(['excellent', 'good', 'fair', 'poor']).required(),
   owner: Yup.string().required(),
 });
